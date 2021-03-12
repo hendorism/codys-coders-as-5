@@ -1,0 +1,17 @@
+<div class="pokedex-inner">
+  <div class="pokedex-screen list-group row row-cols-2">
+    <% @poke_list[:list].each do |pokemon| %>
+      <%= link_to (pokemon[:id] + ": " + pokemon[:name]), pokemon_path(:id => pokemon[:id]), class: "poke-list-item col list-group-item" %>
+    <% end %>
+  </div>
+
+  <div class="pokedex-list-buttons btn-group">
+    <%= link_to pokemon_index_path(:offset => @poke_list[:prev][:offset], :limit => @poke_list[:prev][:limit]), class: "btn btn-secondary border-dark #{ @poke_list[:prev][:offset].empty? ? ' disabled' : '' }" do %>
+      <i class="bi bi-caret-left"></i>
+    <% end %>
+
+    <%= link_to pokemon_index_path(:offset => @poke_list[:next][:offset], :limit => @poke_list[:next][:limit]), class: "btn btn-secondary border-dark" do %>
+      <i class="bi bi-caret-right"></i>
+    <% end %>
+  </div>
+</div>
