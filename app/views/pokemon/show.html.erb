@@ -1,0 +1,21 @@
+<div class="container <%= @pokemon[:types][0].downcase %>">
+  <%= @pokemon[:name] %>
+</div>
+  <% @pokemon[:types].each do |type| %>
+    <%= type %><br>
+  <% end %>
+  <%= @pokemon[:num] %><br>
+<img src='<%= @pokemon[:sprite] %>' class="sprite">
+<br>Height: <%= @pokemon[:height] %>
+<br>Weight: <%= @pokemon[:weight] %>
+<br>Abilities: <%= @pokemon[:abils] %>
+<br>Held Items: <%= @pokemon[:items] %><br><br>
+<%= link_to pokemon_path(:id => (params[:id].to_i - 1).to_s), class: "btn #{ params[:id] == '1' ? 'disabled' : '' }" do %>
+previous
+<% end %>
+<%= link_to root_path, class: "btn btn-secondary border-dark" do %>
+index
+<% end %>
+<%= link_to pokemon_path(:id => (params[:id].to_i + 1).to_s), class: "btn btn-secondary border-dark" do %>
+next
+<% end %>

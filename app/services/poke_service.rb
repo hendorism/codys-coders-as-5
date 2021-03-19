@@ -19,7 +19,7 @@ class PokeService
     return {
       :prev => prev_query,
       :next => next_query,
-      :list => parsed[:result]
+      :list => parsed[:results]
     }
   end
 
@@ -30,7 +30,7 @@ class PokeService
     pokename = parsed[:name].capitalize
     pokenumber = "#%03d" % parsed[:id]
 
-    pokesprite = parsed[:sprite][:other][:"official-artwork"][:front_default]
+    pokesprite = parsed[:sprites][:other][:"official-artwork"][:front_default]
 
     poketypes = parsed[:types].map { |v| v[:type][:name].capitalize }
     pokeheight = format_info(parsed[:height], "height")
@@ -40,14 +40,14 @@ class PokeService
     pokeitems = format_info_list(parsed[:held_items], :item, :name)
 
     return {
-      :name => pokename,
-      :num => pokenumber,
+      :name   => pokename,
+      :num    => pokenumber,
       :sprite => pokesprite,
-      :types => poketypes,
+      :types  => poketypes,
       :height => pokeheight,
       :weight => pokeweight,
-      :abils => pokeabils,
-      :items => pokeitems
+      :abils  => pokeabils,
+      :items  => pokeitems
     }
   end
 
@@ -67,7 +67,7 @@ class PokeService
     end
 
     def format_info(raw, type)
-      case types
+      case type
       when "weight"
         converted = raw / 4.536
         rounded = converted < 1 ? converted.round(1) : converted.round()

@@ -20,6 +20,7 @@ body {
   background-color: #ddeeff;
   color: #116644;
   font-family: monospace;
+  font-size: 18px;
 }
 
 h1 {
@@ -29,3 +30,54 @@ h1 {
 p {
   color: #822361;
 }
+
+.btn {
+  text-decoration: none;
+  padding: 2px 6px 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #348764;
+}
+
+.sprite {
+  width: 20vw;
+  max-width: 200px;
+}
+.normal {}
+
+.fighting {}
+
+.flying {}
+
+.poison {}
+
+.ground {}
+
+.rock {}
+
+.bug {}
+
+.ghost {}
+
+.steel {}
+
+.fire {}
+
+.water {}
+
+.grass {}
+
+.electric {}
+
+.psychic {}
+
+.ice {}
+
+.dragon {}
+
+.dark {}
+
+.fairy {}
+
+.unknown {}
+
+.shadow {}
