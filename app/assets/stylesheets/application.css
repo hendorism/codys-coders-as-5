@@ -31,6 +31,19 @@ p {
   color: #822361;
 }
 
+.poke-index-link {
+  /* hello */
+}
+
+.index-list {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+}
+
+.index-list-item {
+
+}
+
 .btn {
   text-decoration: none;
   padding: 2px 6px 2px 6px;
@@ -42,42 +55,24 @@ p {
   width: 20vw;
   max-width: 200px;
 }
-.normal {}
 
-.fighting {}
-
-.flying {}
-
-.poison {}
-
-.ground {}
-
-.rock {}
-
-.bug {}
-
-.ghost {}
-
-.steel {}
-
-.fire {}
-
-.water {}
-
-.grass {}
-
-.electric {}
-
-.psychic {}
-
-.ice {}
-
-.dragon {}
-
-.dark {}
-
-.fairy {}
-
-.unknown {}
-
-.shadow {}
+.normal   {color: #d45f65;}
+.fighting {color: #e8121b;}
+.flying   {color: #5eb9b4;}
+.poison   {color: #a819d7;}
+.ground   {color: #e2d15b;}
+.rock     {color: #e2d15b;}
+.bug      {color: #bddd6e;}
+.ghost    {color: #8f54a4;}
+.steel    {color: #7b8e8a;}
+.fire     {color: #f67e0c;}
+.water    {color: #2279be;}
+.grass    {color: #3f9607;}
+.electric {color: #fffa24;}
+.psychic  {color: #ed0f64;}
+.ice      {color: #2c94a3;}
+.dragon   {color: #8b56fe;}
+.dark     {color: #604632;}
+.fairy    {color: #f9a0c2;}
+.unknown  {color: #dcfcf7;}
+.shadow   {color: #505058;}

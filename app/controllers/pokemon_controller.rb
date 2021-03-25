@@ -6,7 +6,7 @@ class PokemonController < ApplicationController
 
   def show
     @pokemon = PokeService.new.get_pokemon(params[:id])
-    binding.pry
+    
   end
 
 end
